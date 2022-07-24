@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <title>HOME | INDIAN ARMY</title>
+</head>
+
+<body>
+    <nav>
+        <div class="menu1">
+			<div class="image"><img src="{{url_for('static', filename='logo1.png')}}" alt="" /> <br /></div>
+            <div class="logo">
+                <a href="{{ url_for('homepage') }}">Join the INDIAN ARMY </a> <br />
+            </div>
+            <ul>
+				<li><a href="#">Welcome, {{session.username}}!</a></li>
+				<li><a href="{{ url_for('aboutarmy') }}">About INDIAN ARMY</a></li>
+				<li><a href="{{ url_for('lifeinarmy') }}">Life in Army</a></li>
+				<li><a href="{{ url_for('search') }}">Users</a></li>
+				<li><a href="{{ url_for('logout') }}">Sign Out</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="img">
+        <div class="row">
+            <div class="column">
+				<img src="{{url_for('static', filename='poster 1.jpg')}}" alt="Snow" style="width: 100%" />
+            </div>
+            <div class="column">
+                <img src="{{url_for('static', filename='poster 2.jpg')}}" alt="Forest" style="width: 100%" />
+            </div>
+            <div class="column">
+                <img src="{{url_for('static', filename='poster 3.jpg')}}" alt="Mountains" style="width: 100%" />
+            </div>
+        </div>
+    </div>
+
+    <div class="center">
+        <div class="title">
+            This website helps you in joining the Indian Army as an Officer or Junior Commissioned Officer or, 
+			<br /> as an Other Rank depending on your qualification and aptitude. You can find the necessary  
+			<br /> information here in case you want to join in this category.
+        </div>
+        <div class="imp">
+            <h1>Important details and information</h1>
+            <div class="sub" style="color: rgb(177, 115, 0)">
+				<h3><a href="{{ url_for('sessions') }}" style="color: green">| Live Chat</a></h3>
+                <h2><a href="https://joinindianarmy.nic.in/joining-instructions.htm" style="color: green">| Examination Details</a></h2>
+				<h3><a href="{{ url_for('searchjobs') }}" style="color: green">| Check Eligibility</a></h3>
+				<h3><a href="https://joinindianarmy.nic.in/medical-examination.htm" style="color: green">| Medical Examination</a></h3>
+			</div>
+		</div>
+		<br />
+		<br />
+
+		<br />
+		<div class="dropdown">
+			<button class="dropbtn">Gallery</button>
+			<div class="dropdown-content">
+				<a href="{{ url_for('imagegallery') }}">Image Gallery</a>
+				<a href="{{ url_for('videogallery') }}">Video Gallery</a>
+				<a href="#">Testimonials </a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">News</button>
+            <div class="dropdown-content">
+                <a href="{{url_for('newsjco')}}">For JCO / OR</a>
+                <a href="{{url_for('newsofficer')}}">For Officers</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Notifications</button>
+            <div class="dropdown-content">
+                <a href="{{url_for('notifjco')}}">For JCO / OR</a>
+				<a href="{{url_for('notifofficer')}}">For Officers</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Awards and Honours</button>
+            <div class="dropdown-content">
+				<a href="{{ url_for('awards') }}">Awards</a>
+            </div>
+        </div>
+
+        <div class="sub_title">
+            >What Army Offers You <br /> >Recruitment Categories <br /> >Eligibility Criteria <br /> >Rally / Common Entrance Examination(CEE) Schedule <br /> >Documents Required <br /> >Physical Fitness Test <br /> >Dispensation <br /> >Sportsman Recruitment
+            <br /> >Recruitment Offices <br /> >Defence Service Corps (DSC) Recruitment <br /> >Regimental Centres / Unit Headquarters Quota <br /> >Recruitment Procedure
+        </div>
+        <div class="btns">
+            <button>
+			<a href="mailto:joinindianarmy2601@gmail.com"> Contact US</a>
+			</button>
+            <button>
+			<a href="mailto:joinindianarmy2601@gmail.com"> Join US !</a>
+			</button>
+        </div>
+    </div>
+    <footer>
+        <p>
+            Terms & Conditions | Privacy Policy | Copyright Policy | Hyperlinking Policy | Accessibility | Statement | Help <br /> Copyright © 2021 Join Indian Army, Government of India. All Rights Reserved.
+        </p>
+        
+    </footer>
+</body>
+
+</html>
